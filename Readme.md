@@ -1,5 +1,5 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Environment:
+
+# Environment:
 Run with GTX 980Ti, python 2.7, theano 0.9.0 and lasagne 0.2.dev1, pylearn2
 
 Dataset: 
@@ -9,7 +9,9 @@ Dataset:
 Logs and models:
 The related models and logs are also inside this folder
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+# Experiment:
+
 For experiments in section 4.2
 - code/expts2/fc/run.sh
 
