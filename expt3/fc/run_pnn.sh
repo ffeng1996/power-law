@@ -1,3 +1,4 @@
+#!/bin/bash
 # AoB: using random attachment
 # ApB: means using preferential attachment
 

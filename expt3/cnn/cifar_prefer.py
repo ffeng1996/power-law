@@ -16,17 +16,19 @@ def new_task():
 	print('Loading CIFAR-100 dataset...')
 	train_set_size = 45000
 
-	preprocessor = serial.load("${PYLEARN2_DATA_PATH}/cifar100/pylearn2_gcn_whitened/preprocessor.pkl")
+	#preprocessor = serial.load("${PYLEARN2_DATA_PATH}/cifar100/pylearn2_gcn_whitened/preprocessor.pkl")\
+	preprocessor = serial.load("/home/eric/Desktop/powerLaw/power-law/expt3/cnn/cifar100/pylearn2_gcn_whitened/preprocessor.pkl")
+
 	train_set = ZCA_Dataset(
-		preprocessed_dataset=serial.load("${PYLEARN2_DATA_PATH}/cifar100/pylearn2_gcn_whitened/train.pkl"), 
+		preprocessed_dataset=serial.load("/home/eric/Desktop/powerLaw/power-law/expt3/cnn/cifar100/pylearn2_gcn_whitened/train.pkl"),
 		preprocessor = preprocessor,
 		start=0, stop = train_set_size)
 	valid_set = ZCA_Dataset(
-		preprocessed_dataset= serial.load("${PYLEARN2_DATA_PATH}/cifar100/pylearn2_gcn_whitened/train.pkl"), 
+		preprocessed_dataset= serial.load("/home/eric/Desktop/powerLaw/power-law/expt3/cnn/cifar100/pylearn2_gcn_whitened/train.pkl"),
 		preprocessor = preprocessor,
 		start=45000, stop = 50000)  
 	test_set = ZCA_Dataset(
-		preprocessed_dataset= serial.load("${PYLEARN2_DATA_PATH}/cifar100/pylearn2_gcn_whitened/test.pkl"), 
+		preprocessed_dataset= serial.load("/home/eric/Desktop/powerLaw/power-law/expt3/cnn/cifar100/pylearn2_gcn_whitened/test.pkl"),
 		preprocessor = preprocessor)
 
 	ind = np.where(train_set.y.flatten()<10)[0]
@@ -60,17 +62,17 @@ def load_dataset():
 	
 	print('Loading CIFAR-10 dataset...')
 	
-	preprocessor = serial.load("${PYLEARN2_DATA_PATH}/cifar10/pylearn2_gcn_whitened/preprocessor.pkl")
+	preprocessor = serial.load("/home/eric/Desktop/powerLaw/power-law/expt3/cnn/cifar10/pylearn2_gcn_whitened/preprocessor.pkl")
 	train_set = ZCA_Dataset(
-		preprocessed_dataset=serial.load("${PYLEARN2_DATA_PATH}/cifar10/pylearn2_gcn_whitened/train.pkl"), 
+		preprocessed_dataset=serial.load("/home/eric/Desktop/powerLaw/power-law/expt3/cnn/cifar10/pylearn2_gcn_whitened/train.pkl"),
 		preprocessor = preprocessor,
 		start=0, stop = train_set_size)
 	valid_set = ZCA_Dataset(
-		preprocessed_dataset= serial.load("${PYLEARN2_DATA_PATH}/cifar10/pylearn2_gcn_whitened/train.pkl"), 
+		preprocessed_dataset= serial.load("/home/eric/Desktop/powerLaw/power-law/expt3/cnn/cifar10/pylearn2_gcn_whitened/train.pkl"),
 		preprocessor = preprocessor,
 		start=45000, stop = 50000)  
 	test_set = ZCA_Dataset(
-		preprocessed_dataset= serial.load("${PYLEARN2_DATA_PATH}/cifar10/pylearn2_gcn_whitened/test.pkl"), 
+		preprocessed_dataset= serial.load("/home/eric/Desktop/powerLaw/power-law/expt3/cnn/cifar10/pylearn2_gcn_whitened/test.pkl"),
 		preprocessor = preprocessor)
 	# bc01 format
 	X_train = train_set.X.reshape(-1,3,32,32)
