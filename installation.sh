@@ -1,6 +1,9 @@
 pip install -r requirements.txt --user
 
 git clone git://github.com/lisa-lab/pylearn2.git
-python setup.py develop
-python setup.py develop --user
-pip install -r https://raw.githubusercontent.com/Lasagne/Lasagne/v0.1/requirements.txt
+python ./pylearn2/setup.py develop
+python ./pylearn2/setup.py develop --user
+
+git clone https://github.com/Lasagne/Lasagne.git
+cd Lasagne
+python setup.py install

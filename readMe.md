@@ -17,12 +17,12 @@ sh installation.sh
 For experiments in section 4.2
 
 ```
-power-law/expts2/fc/run.sh
+power-law/expt2/fc/run.sh
 ```
 For experiments in section 5.1
 
 ```
-power-law/expts3/fc/run_pathnet.sh
+power-law/expt3/fc/run_pathnet.sh
 ```
 For mlp on mnist in section 5.2:/home/eric
 
