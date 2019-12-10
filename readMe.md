@@ -1,4 +1,4 @@
-##Requirements
+## Requirements
 Recommend install in virtual environment
 ```
 $ conda create -n yourenvname anaconda
@@ -12,7 +12,7 @@ Install the required the packages inside the virtual environment
 ```
 ./installation.sh
 ```
-##Run the models
+## Run the models
 
 For experiments in section 4.2
 
@@ -34,7 +34,7 @@ For cnn on cifar in section 5.2:
 power-law/expts3/cnn/run_cifar_pnn.sh
 ```
 
-##Dataset
+## Dataset
 
 - MNIST is inside this folder
 - CIFAR dataset need to be prepared using pylearn2 following https://github.com/MatthieuCourbariaux/BinaryConnect
