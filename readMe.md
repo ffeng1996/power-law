@@ -27,7 +27,7 @@ power-law/expt3/fc/run_pathnet.sh
 For mlp on mnist in section 5.2:/home/eric
 
 ```
-power-law/expts3/fc/run_pnn.sh
+power-law/expt3/fc/run_pnn.sh
 ```
 For cnn on cifar in section 5.2:
 ```
