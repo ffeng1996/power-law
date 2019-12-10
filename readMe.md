@@ -1,7 +1,7 @@
 ## Requirements
 Recommend install in virtual environment
 ```
-$ conda create -n yourenvname anaconda
+$ conda create -n yourenvname python=2.7 anaconda
 ```
 
 Activate the enviorment
@@ -10,7 +10,7 @@ conda activate yourenvname
 ```
 Install the required the packages inside the virtual environment
 ```
-./installation.sh
+sh installation.sh
 ```
 ## Run the models
 
@@ -24,7 +24,7 @@ For experiments in section 5.1
 ```
 power-law/expts3/fc/run_pathnet.sh
 ```
-For mlp on mnist in section 5.2:
+For mlp on mnist in section 5.2:/home/eric
 
 ```
 power-law/expts3/fc/run_pnn.sh
