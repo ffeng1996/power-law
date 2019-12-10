@@ -31,7 +31,7 @@ power-law/expts3/fc/run_pnn.sh
 ```
 For cnn on cifar in section 5.2:
 ```
-power-law/expts3/cnn/run_cifar_pnn.sh
+power-law/expt3/cnn/run_cifar_pnn.sh
 ```
 
 ## Dataset
