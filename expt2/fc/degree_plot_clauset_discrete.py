@@ -8,10 +8,10 @@ from scipy import optimize
 
 from matplotlib import ticker
 import powerlaw
-import pylab
+#import pylab
 
-pylab.rcParams['xtick.major.pad'] = '16'
-pylab.rcParams['ytick.major.pad'] = '16'
+#pylab.rcParams['xtick.major.pad'] = '16'
+#pylab.rcParams['ytick.major.pad'] = '16'
 # pylab.rcParams['font.sans-serif']='Arial'
 from scipy.optimize import minimize
 from matplotlib import rc
