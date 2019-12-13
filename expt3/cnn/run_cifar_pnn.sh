@@ -1,3 +1,4 @@
+#!/bin/bash
 # separate network
 for((i=1;i<=4;i++));
 do
