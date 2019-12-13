@@ -14,22 +14,22 @@ sh installation.sh
 ```
 ## Run the models
 
-For experiments in section 4.2
+For experiments in section **4.2**
 
 ```
 bash power-law/expt2/fc/run.sh
 ```
-For experiments in section 5.1
+For experiments in section **5.1**
 
 ```
 bash power-law/expt3/fc/run_pathnet.sh
 ```
-For mlp on mnist in section 5.2:/home/eric
+For mlp on mnist in section **5.2**:
 
 ```
 bash power-law/expt3/fc/run_pnn.sh
 ```
-For cnn on cifar in section 5.2:
+For cnn on cifar in section **5.2**:
 ```
 bash power-law/expt3/cnn/run_cifar_pnn.sh
 ```
