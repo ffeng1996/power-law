@@ -38,3 +38,14 @@ bash power-law/expt3/cnn/run_cifar_pnn.sh
 
 - MNIST is inside this folder
 - CIFAR dataset need to be prepared using pylearn2 following https://github.com/MatthieuCourbariaux/BinaryConnect
+
+## For CNN in expt3:
+- First download CIFAR dataset and put the data in expt3/cnn/cifar10(100) 
+- Run the scripts to build up pickle input format (need minor changes on the path):
+```
+cd power-law/pylearn2/pylearn2/datasets
+python cifar10.py
+python cifar100.py
+cd power-law/pylearn2/pylearn2/scripts/datasets
+python make_cifar10_gcn_whitened.py
+python make_cifar100_gcn_whitened.py
