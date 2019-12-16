@@ -13,6 +13,3 @@ python degree_plot_clauset_discrete.py --filename="model/sparse_model_0.9_2_1024
 
 # plot ccdf for the second task
 python degree_plot_clauset_discrete.py --filename="cont_model/cont_sparse_fc_0.1_0.9_8_2_1024.npz" --option="ccdf" --hidden_units=1024
-
-
-

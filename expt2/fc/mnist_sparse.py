@@ -13,6 +13,9 @@ import lab
 import lasagne
 
 
+'''
+prune 90% connections
+'''
 # Permute images
 def permute_mnist(window_size, X_train, y_train, X_val, y_val, X_test, y_test):
 	num_permute = window_size*window_size
