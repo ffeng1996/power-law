@@ -9,6 +9,9 @@ import theano
 import theano.tensor as T
 import lasagne
 
+'''
+train a dense network
+'''
 
 # Permute images
 def permute_mnist(window_size, X_train, y_train, X_val, y_val, X_test, y_test):
