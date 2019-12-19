@@ -162,7 +162,7 @@ def main(prune_fraction, model='mlp', num_epochs=500):
 
     depth, width, drop_in, drop_hid = model.split(':', 1)[1].split(',')
 
-    with np.load('model/model_{0}_{1}.npz'.format(depth, width)) as f:
+    with np.load('model/modelExpt1_{0}_{1}.npz'.format(depth, width)) as f:
         param_values = [f['arr_%d' % i] for i in range(len(f.files))]
 
     # thresholding the weights
@@ -262,7 +262,7 @@ def main(prune_fraction, model='mlp', num_epochs=500):
             test_loss = test_loss / test_batches
             test_acc = test_acc / test_batches * 100
 
-            np.savez('model/sparse_model_{0}_{1}_{2}_expt1.npz'.format(prune_fraction, depth, width),
+            np.savez('model/sparse_modelExpt1_{0}_{1}_{2}.npz'.format(prune_fraction, depth, width),
                      *lasagne.layers.get_all_param_values(network_s))
 
         print("Epoch {} of {} took {:.3f}s".format(
@@ -273,7 +273,7 @@ def main(prune_fraction, model='mlp', num_epochs=500):
         print("  test loss:\t\t\t{:.6f}".format(test_loss))
         print("  test accuracy:\t\t{:.2f} %".format(test_acc))
 
-        with open("model/sparse_{0}_{1}_{2}_{3}_{4}.txt".format(prune_fraction, depth, width, drop_in, drop_hid),
+        with open("model/sparseExpt1_{0}_{1}_{2}_{3}_{4}.txt".format(prune_fraction, depth, width, drop_in, drop_hid),
                   "a") as myfile:
             myfile.write("{0}  {1:.3f} {2:.3f} {3:.3f} {4:.3f} {5:.3f}\n".format(
                 epoch, train_loss, val_loss, val_acc, test_loss, test_acc))
