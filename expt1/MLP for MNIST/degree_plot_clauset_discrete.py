@@ -224,7 +224,7 @@ def main(filename, option, num_layers, hidden_units, adjust_axis):
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--filename", type=str, dest="filename",
-                        default='model/sparse_model_0.9_2_1024.npz')
+                        default='model/sparse_modelExpt1_0.9_2_1024.npz')
     parser.add_argument("--option", type=str, dest="option",
                         default="orig", help="orig or ccdf")
     parser.add_argument("--num_layers", type=int, dest="num_layers",
