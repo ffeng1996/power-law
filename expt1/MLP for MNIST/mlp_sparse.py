@@ -262,7 +262,7 @@ def main(prune_fraction, model='mlp', num_epochs=500):
             test_loss = test_loss / test_batches
             test_acc = test_acc / test_batches * 100
 
-            np.savez('model/sparse_model_{0}_{1}_{2}.npz'.format(prune_fraction, depth, width),
+            np.savez('model/sparse_model_{0}_{1}_{2}_expt1.npz'.format(prune_fraction, depth, width),
                      *lasagne.layers.get_all_param_values(network_s))
 
         print("Epoch {} of {} took {:.3f}s".format(
