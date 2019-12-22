@@ -82,4 +82,4 @@ python make_cifar100_gcn_whitened.py
 expt1/cnn_large
 ```
 - For GPU support during training, please refer to this [tutorial](https://lasagne.readthedocs.io/en/latest/user/installation.html#cuda).
- 
+- Please make sure the configuration of environmental variables has been done under root path.  

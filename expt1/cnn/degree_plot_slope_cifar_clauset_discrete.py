@@ -154,12 +154,13 @@ def degree_plot(data, shape_info, option, adjust_axis, xaxis_labels_all):
         else:
             current_degree = np.sum(data_current, axis=0).astype(int)
         if i < len(data) - 1 and len(data_current.shape) == len(data_next.shape):
-            data_next[data_next > 0.0] = 1
+            data_current[data_current > 0.0] = 1
             if len(data_next.shape) > 2:
                 next_degree = np.sum(data_next, axis=(0, 2, 3)).astype(int)
                 next_degree = next_degree * shape_info[i + 1][2] * shape_info[i + 1][3]
             else:
-                next_degree = np.sum(data_next, axis=1).astype(int)
+                next_degree = np.sum(data_next, axis=0).astype(int)
+
             current_degree = current_degree + next_degree
             current_degree = current_degree[np.nonzero(current_degree)]
 
@@ -168,6 +169,7 @@ def degree_plot(data, shape_info, option, adjust_axis, xaxis_labels_all):
 
 
 def main(filename, option, adjust_axis):
+    import lasagne
     from lasagne.layers import InputLayer
     from lasagne.layers import DenseLayer
     from lasagne.layers import NonlinearityLayer
@@ -190,13 +192,12 @@ def main(filename, option, adjust_axis):
     with np.load(filename) as f:
         param_values_sparse = [f['arr_%d' % i] for i in range(len(f.files))]
 
-    layers = [net['conv1'], net['conv2'], net['fc3'], net['fc4']]
+    layers = [net['conv1'], net['conv2'], net['conv3'],net['conv4'],net['fc5']]
     shape_info = lasagne.layers.get_output_shape(layers)
     # plot except the last layer
-    xaxis_labels_all = [[2.0e4, 2.5e4], [1.4e4, 1.6e4, 1.8e4], [1.5e2, 1.6e2]]
-    degree_plot([param_values_sparse[0], param_values_sparse[2], param_values_sparse[4]],
+    xaxis_labels_all = [[9.0e4, 1.0e5], [1.3e5, 1.4e5], [6.5e4, 7.0e4, 7.5e5],[4.0e4, 6.0e4, 8.0e4],[1.24e3, 1.3e3, 1.4e3]]
+    degree_plot([param_values_sparse[0], param_values_sparse[1], param_values_sparse[3],param_values_sparse[4],param_values_sparse[6]],
                 shape_info, option, adjust_axis, xaxis_labels_all)
-
 
 if __name__ == "__main__":
     parser = ArgumentParser()

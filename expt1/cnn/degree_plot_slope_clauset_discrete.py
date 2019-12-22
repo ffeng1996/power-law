@@ -193,6 +193,11 @@ def main(filename, option, adjust_axis):
     layers = [net['conv1'], net['conv2'], net['fc3'], net['fc4']]
     shape_info = lasagne.layers.get_output_shape(layers)
     # plot except the last layer
+    print ('##########################################################')
+    print np.size(param_values_sparse)
+    print np.array(param_values_sparse).shape
+    print param_values_sparse[0].shape
+
     xaxis_labels_all = [[2.0e4, 2.5e4], [1.4e4, 1.6e4, 1.8e4], [1.5e2, 1.6e2]]
     degree_plot([param_values_sparse[0], param_values_sparse[2], param_values_sparse[4]],
                 shape_info, option, adjust_axis, xaxis_labels_all)
