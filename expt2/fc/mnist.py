@@ -213,7 +213,7 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=True):
 # more functions to better separate the code, but it wouldn't make it any
 # easier to read.
 
-def main(model='mlp', num_epochs=500):
+def main(model='fc', num_epochs=500):
 	# Load the dataset
 	print("Loading data...")
 	X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
@@ -229,7 +229,7 @@ def main(model='mlp', num_epochs=500):
 
 	# Create neural network model (depending on first command line parameter)
 	print("Building model and compiling functions...")
-	if model == 'mlp':
+	if model == 'fc':
 		network = build_mlp(input_var)
 	elif model.startswith('custom_mlp:'):
 		depth, width, drop_in, drop_hid = model.split(':', 1)[1].split(',')
@@ -335,7 +335,7 @@ if __name__ == '__main__':
 		print("Trains a neural network on MNIST using Lasagne.")
 		print("Usage: %s [MODEL [EPOCHS]]" % sys.argv[0])
 		print()
-		print("MODEL: 'mlp' for a simple Multi-Layer Perceptron (MLP),")
+		print("MODEL: 'fc' for a simple Multi-Layer Perceptron (MLP),")
 		print("       'custom_mlp:DEPTH,WIDTH,DROP_IN,DROP_HID' for an MLP")
 		print("       with DEPTH hidden layers of WIDTH units, DROP_IN")
 		print("       input dropout and DROP_HID hidden dropout,")

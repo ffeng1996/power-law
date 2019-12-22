@@ -121,7 +121,7 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=True):
 
 
 # Main program
-def main(model='mlp', num_epochs=500):
+def main(model='fc', num_epochs=500):
 	# Load the dataset
 	print("Loading data...")
 	X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()

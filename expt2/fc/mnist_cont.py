@@ -186,7 +186,7 @@ def task1_loss(X_test, y_test, param_values, param_values_2, model,
 
 
 # Main program
-def main(add_fraction, permute_size, sparsity, model='mlp', num_epochs=500):
+def main(add_fraction, permute_size, sparsity, model='fc', num_epochs=500):
 	# Load the dataset
 	print("Loading data...")
 	X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()

@@ -8,3 +8,5 @@ python ./pylearn2/setup.py develop --user
 git clone https://github.com/Lasagne/Lasagne.git
 cd Lasagne
 python setup.py install
+
+conda install -c conda-forge caffe

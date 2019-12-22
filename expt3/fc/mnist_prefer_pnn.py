@@ -208,7 +208,7 @@ def prefer_connection(mask, add_nodes, connect_fraction, layer_size, layer_size_
 
 
 # Main program
-def main(permute_size, sparsity, model='mlp', num_epochs=200, add_nodes=100, method='AoB', connect_fraction=0.2):
+def main(permute_size, sparsity, model='fc', num_epochs=200, add_nodes=100, method='AoB', connect_fraction=0.2):
 	# Load the dataset
 	print("Loading data...")
 	X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()

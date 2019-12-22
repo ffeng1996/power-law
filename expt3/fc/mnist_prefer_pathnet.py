@@ -241,7 +241,7 @@ def dense_sparse(mask,  connect_fraction, layer_size, layer_size_new, param_valu
 
 
 # Main program
-def main(permute_size, sparsity, model='mlp', num_epochs=200, method='AoB', connect_fraction=0.1):
+def main(permute_size, sparsity, model='fc', num_epochs=200, method='AoB', connect_fraction=0.1):
 	# Load the dataset
 	print("Loading data...")
 	X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
