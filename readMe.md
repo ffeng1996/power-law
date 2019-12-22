@@ -77,7 +77,7 @@ python make_cifar100_gcn_whitened.py
 ```
 
 ## Other notes
-- Due to github file size limitation, models in VGG and AlexNet on ImageNet in section 3.2 cannot upload in the repo. You can download on this [Google drive link](http://www.google.com/). Please place the three files under:
+- Due to github file size limitation, models in VGG and AlexNet on ImageNet in section 3.2 cannot upload in the repo. You can download on this [Google drive link](https://drive.google.com/drive/folders/1ceJs87P4g5VGdDyA8fIZWaN8-_MRtiCC?usp=sharing). Please place the three files under:
 ```
 expt1/cnn_large
 ```
