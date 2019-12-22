@@ -17,7 +17,7 @@ sh installation.sh
 For experiments in section **3.1**
 
 ```
-bash expt1/mlp/run.sh
+bash expt1/fc/run.sh
 ```
 
 For CNN on MNIST experiment in section **3.2**
