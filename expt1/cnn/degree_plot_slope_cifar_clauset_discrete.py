@@ -159,7 +159,7 @@ def degree_plot(data, shape_info, option, adjust_axis, xaxis_labels_all):
                 next_degree = np.sum(data_next, axis=(0, 2, 3)).astype(int)
                 next_degree = next_degree * shape_info[i + 1][2] * shape_info[i + 1][3]
             else:
-                next_degree = np.sum(data_next, axis=0).astype(int)
+                next_degree = np.sum(data_next, axis=1).astype(int)
 
             current_degree = current_degree + next_degree
             current_degree = current_degree[np.nonzero(current_degree)]
@@ -196,7 +196,7 @@ def main(filename, option, adjust_axis):
     shape_info = lasagne.layers.get_output_shape(layers)
     # plot except the last layer
     xaxis_labels_all = [[9.0e4, 1.0e5], [1.3e5, 1.4e5], [6.5e4, 7.0e4, 7.5e5],[4.0e4, 6.0e4, 8.0e4],[1.24e3, 1.3e3, 1.4e3]]
-    degree_plot([param_values_sparse[0], param_values_sparse[1], param_values_sparse[3],param_values_sparse[4],param_values_sparse[6]],
+    degree_plot([param_values_sparse[0], param_values_sparse[2], param_values_sparse[4],param_values_sparse[6],param_values_sparse[8]],
                 shape_info, option, adjust_axis, xaxis_labels_all)
 
 if __name__ == "__main__":
