@@ -64,7 +64,7 @@ bash expt3/cnn/run_cifar_pnn.sh
 - MNIST is inside this folder
 - CIFAR dataset need to be prepared using pylearn2 following https://github.com/MatthieuCourbariaux/BinaryConnect
 
-## For CNN in expt3:
+## For CNN on CIFAR in both section 3.2 and 5.2:
 - First download CIFAR dataset and put the data in expt3/cnn/cifar10(100) 
 - Run the scripts to build up pickle input format (need minor changes on the path):
 ```
@@ -75,6 +75,7 @@ cd power-law/pylearn2/pylearn2/scripts/datasets
 python make_cifar10_gcn_whitened.py
 python make_cifar100_gcn_whitened.py
 ```
+- Or you can directly download from this [Google drive link](https://drive.google.com/open?id=1qtfoy_sLl7E3jKAc0oIG_iXHi_n12ISo).
 
 ## Other notes
 - Due to github file size limitation, models in VGG and AlexNet on ImageNet in section 3.2 cannot upload in the repo. You can download on this [Google drive link](https://drive.google.com/drive/folders/1ceJs87P4g5VGdDyA8fIZWaN8-_MRtiCC?usp=sharing). Please place the three files under:
